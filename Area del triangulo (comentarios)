@@ -1,0 +1,32 @@
+//Nombre: AreaTriangulo
+//Autor:Maria Fernanda Osinaga Villarroel
+//Fecha:03/09/2015
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+//librerias
+
+using namespace std;
+//Ingresar datos por el teclado y la salida es por el monitor
+
+void main()
+{
+   float area,base,altura;
+   //Declaracion de variables
+   cout<<"Ingrese base: ";
+   //Mensaje para el usuario
+   cin>>base;
+   //Entrada de datos
+   cout<<"Ingrese altura: ";
+   //Mensaje para el usuario
+   cin>>altura;
+   //Entrada de datos
+   area=(base*altura)/2;
+   //Formula del calculo del area de un triangulo
+   cout<<"El area es: "<<area;
+   //Mensaje para el usuario con el resultado
+   getch();
+   //Terminar el programa
+
+}
