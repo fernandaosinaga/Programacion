@@ -1,0 +1,40 @@
+//Autor: Jose Maria Guzman Capobianco; Maria Fernando Osinaga
+//Fecha: 3/9/2015
+//Objetivo: Resolver Sistema de ecuaciones con variables
+//Instruccion Nueva: La libreria math.h, mayor numero de puntos flotantes.formulas mas complejas
+
+#include "stdafx.h" //Libreria
+#include <iostream> //Libreria
+#include "conio.h" //Libreria
+#include "math.h" //Libreria para formulas matematicas
+
+using namespace std; //Ingreso de datos mediante el teclado y salida de datos mediante el monitor
+
+void ecuacion(float a, float b, float c, float d, float e, float f, float &x, float &y); //Declaracion de Varibales
+void main() //Cuerpo principal
+{
+	float a, b, c, d, e, f, m, n; //Declaracion de variables con decimales
+	cout<<"Ingrese A: ";
+	cin>>a; //Ingreso de variables
+	cout<<"Ingrese B: ";
+	cin>>b; //Ingreso de variables
+	cout<<"Ingrese C: ";
+	cin>>c; //Ingreso de variables
+	cout<<"Ingrese D: ";
+	cin>>d; //Ingreso de variables
+	cout<<"Ingrese E: ";
+	cin>>e; //Ingreso de Variables
+	cout<<"Ingrese F: ";
+	cin>>f; //Ingreso de variables
+	ecuacion(a, b, c, d, e, f, m, n);
+	cout<<"\nEl resultado x = "<<m; //Muestra el resultado
+	cout<<"\nEl resultado y = "<<n; //Muestra el resultado
+	getch();
+}
+
+void ecuacion(float a, float b, float c, float d, float e, float f, float &x, float &y) //Declaracion de Variables
+{
+	y = (a*f - c*d)/(b*d -a*e); //Formula del resultado
+	x = (-c - b*y)/a; //Formula del resultado
+	getch(); //Para detener la pantalla
+}
