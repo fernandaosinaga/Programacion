@@ -1,0 +1,31 @@
+// Mayor de tres numeros
+//Autor: Maria Fernanda Osinaga
+//Fecha:10/09/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float A,B,C;
+	cout<<"Ingrese el primer numero: ";
+	cin>>A;
+	cout<<"Ingrese el segundo numero: ";
+	cin>>B;
+	cout<<"Ingrese el tercer numero: ";
+	cin>>C;
+	if (A>B)
+		if (A>C)
+			cout<<"El mayor es: "<<A;
+		else
+			cout<<"El mayor es: "<<C;
+	else
+		if (B>C)
+			cout<<"El mayor es: "<<B;
+		else
+			cout<<"El mayor es: "<<C;
+	getch();		
+}
