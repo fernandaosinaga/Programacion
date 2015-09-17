@@ -1,0 +1,27 @@
+// ciclo repetitivo.cpp : Defines the entry point for the console application.
+//Autor: Maria Fernanda Osinaga Villarroel
+//Fecha: 17/09/15
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	
+	float b,h,a,p;
+	char resp;
+	do
+	{
+		cout<<endl<<"Ingrese la base: ";
+		cin>>b;
+		cout<< "Ingrese la altura: ";
+		cin>>h;
+		p=(b*h)/2;
+		cout<< "El area es: " <<p;
+		cout<<endl<<"Desea continuar: (y)es ";
+		cin>>resp;
+	}while (resp=='y');
+getch();
+}
