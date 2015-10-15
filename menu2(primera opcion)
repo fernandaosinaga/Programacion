@@ -1,0 +1,79 @@
+// menu 2.cpp : Defines the entry point for the console application.
+//Autor: Maria Fernanda Osinaga Villarroel
+//Fecha: 15/10/2015
+
+
+//el promedio de n numeros
+//mayor de 3 numeros
+//sumar los digitos de un numero
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+float promedio(int n);
+float mayor (int n);
+float suma (int numero);
+
+void main()
+{
+	float Promedio,Mayor, num;
+	int n, opcion;
+	// Menu
+	do {
+		//Desplegar las opciones
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. Promedio de N numeros\n";
+		cout<<"2. El mayor de N numeros\n";
+		cout<<"3. Sumar los digitos de un numero\n";
+		cout<<"0. Salir\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		// Condicional multiple
+		switch (opcion)
+		{
+		case 1: cout<<"Ingrese la cantidad de numeros a sumar: ";
+			    cin>> n;
+				Promedio=promedio(n);
+				cout<<"El promedio es: "<<Promedio;
+				break;
+		case 2: cout<<"Ingrese N: ";
+				cin>>n;
+				Mayor=mayor(n);
+				cout<<"El mayor es: "<<Mayor;
+		case 3: cout<<"Ingrese el numero: ";
+				cin>>num;
+		case 0: cout<<"Saliendo del Menu";
+			    break;
+		default: cout <<"ERROR de opcion";
+			    break;
+		}
+		getch();
+		system("cls");
+	}while (opcion!=0);
+	getch();
+
+}
+
+float promedio(int n)
+{
+  float s=0;
+  float dato;
+  for (int i=1;i<=n;i++)
+	  { cout<<"Ingrese el numero "<<i<<" : ";
+	    cin>>dato;
+	    s=s+dato;
+      } 
+  return s/n;
+}
+float mayor(int n)
+{
+	float num1, num2;
+	for (int i=1; i<=n; i++)
+	{
+	}
+}
