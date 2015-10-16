@@ -16,12 +16,12 @@ using namespace std;
 
 float promedio(int n);
 float mayor (int n);
-float suma (int numero);
+float suma (int cant);
 
 void main()
 {
-	float Promedio,Mayor, num;
-	int n, opcion;
+	float Promedio,Mayor,Suma,num;
+	int n,cantidad, opcion;
 	// Menu
 	do {
 		//Desplegar las opciones
@@ -45,8 +45,12 @@ void main()
 				cin>>n;
 				Mayor=mayor(n);
 				cout<<"El mayor es: "<<Mayor;
+				break;
 		case 3: cout<<"Ingrese el numero: ";
-				cin>>num;
+				cin>>cantidad;
+				Suma=suma(cantidad);
+				cout<<"La suma es: "<<Suma;
+				break;
 		case 0: cout<<"Saliendo del Menu";
 			    break;
 		default: cout <<"ERROR de opcion";
@@ -72,8 +76,28 @@ float promedio(int n)
 }
 float mayor(int n)
 {
-	float num1, num2;
-	for (int i=1; i<=n; i++)
-	{
+	float mayor, num;
+	int i=1,t;
+	cout<<"Ingrese el numero 1: ";
+	cin>>num;
+	mayor=num;
+	while (i<n)
+	{   t=i+1;
+		i=i++;
+		cout<<"Ingrese el numero "<<t<<": ";
+		cin>>num;
+		if (num>mayor)
+			mayor=num;
 	}
+	return mayor;
+}
+float suma(int cantidad)
+{	int d,s=0;
+	while (cantidad!=0)
+		{ d=cantidad%10;
+		  cantidad=cantidad/10;
+		  s=s+d;
+		
+		}
+	return s;
 }
