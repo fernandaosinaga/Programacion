@@ -1,0 +1,45 @@
+// ejecicios.cpp : Defines the entry point for the console application.
+//Autor: Maria Fernanda Osinaga
+//Fecha: 12/11/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+int cargar (int vec[], int n);
+void mostrar (int vec[], int n);
+
+void main()
+{
+	int N,s,sig, vec[MAX];
+	cout<<"Ingrese N: ";
+	cin>>N;
+	s=cargar(vec,N);
+	mostrar(vec,s);
+	getch();
+}
+
+int cargar (int vec [], int n)
+{
+	int sig,j;
+	sig=-1;
+	j=0;
+	for (int i=2; i<=n; i=i+2)
+	{
+		vec[j]=sig*i;
+		sig=-sig;
+		j=j+1;
+
+	}
+	return j;
+}
+
+
+void mostrar (int vec[], int n)
+{
+	for (int i=0; i<n;i++)
+		cout<<"Vec [ "<<i<<" ]: "<<vec[i]<<endl;
+}
