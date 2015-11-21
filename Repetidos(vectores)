@@ -1,0 +1,54 @@
+// Repetidos.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar (int v [], int tamanio);
+void mostrar (int v [], int tamanio);
+int repetidos (int v [], int tamanio, int x);
+
+void main ()
+{
+	int v [MAX], tamanio, r, x;
+	do
+	{
+		cout<<"Ingrese el numero de elementos del vector (maximo 100): ";
+		cin>>tamanio;
+	} while ((tamanio<=0)||(tamanio>100));
+	cargar(v,tamanio);
+	mostrar(v, tamanio);
+	cout<<"Ingrese el numero del cual desea ver cuantas veces esta repetido: ";
+	cin>>x;
+	r=repetidos(v,tamanio,x);
+	cout<<"El numero de veces que esta repetido el "<<x<<" es: "<<r<<endl;
+	getch();
+}
+
+void cargar (int v [], int tamanio)
+{
+	for (int i=0; i<tamanio; i++)
+	{
+		cout<<"v [ "<<i<<" ]: ";
+		cin>>v[i];
+	}
+}
+
+void mostrar (int v [], int tamanio)
+{
+	for (int i=0; i<tamanio; i++)
+		cout<<"v [ "<<i<<" ]: "<<v[i]<<endl;
+}
+
+int repetidos (int v [], int tamanio, int x)
+{
+	int cont=0;
+	for (int i=0; i<tamanio; i++)
+		if (v[i]==x)
+			cont++;
+	return cont;
+}
